@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+
+	int a,b,c;  float d=0.0;
+
+	printf("enter the coefficient of x^2:");
+	scanf("%d",&a);
+	printf("enter the coefficient of x:");
+	scanf("%d",&b);
+	printf("enter the constant:");
+	scanf("%d",&c);
+    
+	if(a==0&&b==0)
+	   printf("No solution...!");
+	else if(a==0)
+	   printf("Root:%d",-c/b);
+	else{
+		d=b*b-4*a*c;
+		if(d<0)
+		   printf("No real roots...!");
+		else{
+			printf("Root1:%.f",(-b+sqrt(d))/(2*a));
+			printf("\nRoot2:%.f",(-b-sqrt(d))/(2*a));
+		}   
+	}   
+		
+}
